@@ -11,6 +11,44 @@ import {
 import Link from "next/link";
 
 export default function HomePage() {
+  const galleryItems = [
+    {
+      id: 1,
+      image: "./feature1.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      id: 2,
+      image: "./feature2.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      id: 3,
+      image: "./feature3.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      id: 4,
+      image: "./feature4.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      id: 5,
+      image: "./feature6.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      id: 6,
+      image: "./feature7.jpg",
+      title: "",
+      description: "",
+    },
+  ];
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -45,12 +83,6 @@ export default function HomePage() {
                 className="flex flex-wrap gap-4 animate-scale-in"
                 style={{ animationDelay: "0.4s" }}
               >
-                <Button asChild size="lg" className="group hover-lift">
-                  <Link href="/projects">
-                    View My Work
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-all duration-300" />
-                  </Link>
-                </Button>
                 <Button
                   asChild
                   variant="outline"
@@ -191,38 +223,123 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 animate-slide-up">
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Gallery</h2>
             <p className="text-lg text-muted-foreground">
-              A showcase of my Achievements.
+              A showcase of my Achievements
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item, index) => (
-              <Card
-                key={item}
-                className="overflow-hidden hover-lift group animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-chart-1/10 relative overflow-hidden">
-                  <img
-                    src={`./feature${item}.jpg `}
-                    alt={`Project ${item}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
-                    Achievments {item}
-                  </h3>
-                </div>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[0].image}
+                  alt={galleryItems[0].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[0].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[0].description}
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[1].image}
+                  alt={galleryItems[1].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[1].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[1].description}
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[2].image}
+                  alt={galleryItems[2].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[2].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[2].description}
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[3].image}
+                  alt={galleryItems[3].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[3].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[3].description}
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[4].image}
+                  alt={galleryItems[4].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[4].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[4].description}
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full">
+                <img
+                  src={galleryItems[5].image}
+                  alt={galleryItems[5].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-xl mb-2">
+                  {galleryItems[5].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {galleryItems[5].description}
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -235,9 +352,6 @@ export default function HomePage() {
             connect and discuss how we can create something amazing together.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="hover-lift animate-glow">
-              <Link href="/contact">Get In Touch</Link>
-            </Button>
             <Button
               asChild
               variant="outline"
