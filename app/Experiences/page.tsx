@@ -1,3 +1,5 @@
+"use client";
+
 import { Navigation } from "@/components/navigation";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +12,8 @@ import {
   Users,
   Lightbulb,
   TrendingUp,
+  Eye,
+  Download,
 } from "lucide-react";
 
 export default function ExperiencesPage() {
@@ -25,6 +29,7 @@ export default function ExperiencesPage() {
         "Completed training in data science, AI, and machine learning",
         "Analyzed GPA predictors using ML models",
       ],
+      certificateUrl: "/internship_c.jpg",
     },
   ];
 
@@ -38,6 +43,7 @@ export default function ExperiencesPage() {
       responsibilities: [
         "I helped organize the intra-school and inter-school SYNTAX competitions relating to Hackathon, the topic for which was to code a bot to play the board game Othello",
       ],
+      certificateUrl: "",
     },
     {
       organization: "DPS Tech Club - SYNTAX",
@@ -46,8 +52,9 @@ export default function ExperiencesPage() {
       duration: "2025-Present",
       type: "Leadership Position",
       responsibilities: [
-        "I designed, organized, and managed the inter-school SYNTAX day competition for Hackathon, pioneering the school’s first ever Game Jam as the topic for the year, with submissions from 10 different schools and a total of 38 students.",
+        "I designed, organized, and managed the inter-school SYNTAX day competition for Hackathon, pioneering the school's first ever Game Jam as the topic for the year, with submissions from 10 different schools and a total of 38 students.",
       ],
+      certificateUrl: "",
     },
     {
       organization: "DPS Science Club - Domus Scientia",
@@ -58,6 +65,7 @@ export default function ExperiencesPage() {
       responsibilities: [
         "One of the leading members of Domus Scientia, I collaborated with the rest of the team to organize an intra-school scientific quiz for all science students from grades 6 to 11, as well as an intra-school scientific debate competition including all 6 houses with the entire school as an audience.",
       ],
+      certificateUrl: "",
     },
   ];
 
@@ -70,6 +78,8 @@ export default function ExperiencesPage() {
       responsibilities: [
         "Third Year Diploma with First Division Distinction across all years, Prayag Sangeet Samiti (2018–2023) ",
       ],
+      certificateUrl:
+        "/Prayag_Sangeet_Samiti_Flute_Junior_Diploma_Examination_Marksheet.jpg",
     },
     {
       organization: "Think Summit- Confabulation",
@@ -79,6 +89,7 @@ export default function ExperiencesPage() {
       responsibilities: [
         "Placed 2nd among 16 schools in Think Summit: a group discussion/debate competition, showcasing knowledge of current affairs and strong research ability",
       ],
+      certificateUrl: "",
     },
     {
       organization: "Schoolathon on Sustainability",
@@ -88,6 +99,7 @@ export default function ExperiencesPage() {
       responsibilities: [
         "Made it to the final round (one of 12 schools from 150 participating) in the Schoolathon on Sustainability; a pitch competition about developing business solutions focusing on the 17 SDGs of the United Nations",
       ],
+      certificateUrl: "",
     },
     {
       organization: "Chemical Convergence, DPS Dwarka Annual Fest",
@@ -97,37 +109,54 @@ export default function ExperiencesPage() {
       responsibilities: [
         "Participant in Chemical Convergence, a chemistry quiz-style event. ",
       ],
+      certificateUrl: "",
     },
     {
       organization:
         "Real Estate Warriors Competition, DPSI Commerce Collective",
       role: "Intra School Competition",
-      location: "2st Place",
+      location: "1st Place",
       duration: "2023",
       responsibilities: [
         " 1st place in the intra-school Real Estate Warriors Competition hosted by Commerce Collective, an economics based investment competition. ",
       ],
+      certificateUrl: "",
     },
     {
       organization: "COVID-19 Vaccination Camp, Sarvodaya Bal Vidyalaya",
       role: "Volunteering",
-      location: "2st Place",
+      location: "Volunteer",
       duration: "2023",
       responsibilities: [
         " I worked in a COVID vaccination camp for six days on a voluntary basis, educating a total of 120 patients on the COVID safety protocols to be followed, guiding patients to the respective rooms, and helping alleviate their stress and anxieties surrounding vaccination.",
       ],
+      certificateUrl: "",
     },
     {
       organization: "Social Venture",
-      role: "Youtube Creater",
+      role: "Youtube Creator",
       location: "Youtube",
       duration: "",
       responsibilities: [
         "I started a YouTube channel about teaching mathematics (and later other subjects) in a fun and interesting way, using examples from video games that many children will find relatable.",
         "Currently, 34 subscribers, 1 video and 596 views.",
       ],
+      certificateUrl: null,
     },
   ];
+
+  const handleViewCertificate = (url: string) => {
+    window.open(url, "_blank");
+  };
+
+  const handleDownloadCertificate = (url: string) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = url.split("/").pop() || "certificate.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -168,13 +197,15 @@ export default function ExperiencesPage() {
                         {exp.company}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-3">
-                        <Badge
-                          variant="secondary"
-                          className="flex items-center gap-1"
-                        >
-                          <MapPin className="h-3 w-3" />
-                          {exp.location}
-                        </Badge>
+                        {exp.location && (
+                          <Badge
+                            variant="secondary"
+                            className="flex items-center gap-1"
+                          >
+                            <MapPin className="h-3 w-3" />
+                            {exp.location}
+                          </Badge>
+                        )}
                         <Badge variant="outline">{exp.type}</Badge>
                       </div>
                       <p className="text-muted-foreground mb-4 text-pretty">
@@ -197,6 +228,31 @@ export default function ExperiencesPage() {
                           ))}
                         </ul>
                       </div>
+
+                      {exp.certificateUrl && (
+                        <div className="flex gap-2 mt-4">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleViewCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Eye className="h-4 w-4 mr-2" />
+                            View Certificate
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleDownloadCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Download className="h-4 w-4 mr-2" />
+                            Download
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -257,6 +313,31 @@ export default function ExperiencesPage() {
                           ))}
                         </ul>
                       </div>
+
+                      {exp.certificateUrl && (
+                        <div className="flex gap-2 mt-4">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleViewCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Eye className="h-4 w-4 mr-2" />
+                            View Certificate
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleDownloadCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Download className="h-4 w-4 mr-2" />
+                            Download
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -314,6 +395,31 @@ export default function ExperiencesPage() {
                           ))}
                         </ul>
                       </div>
+
+                      {exp.certificateUrl && (
+                        <div className="flex gap-2 mt-4">
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleViewCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Eye className="h-4 w-4 mr-2" />
+                            View Certificate
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleDownloadCertificate(exp.certificateUrl)
+                            }
+                          >
+                            <Download className="h-4 w-4 mr-2" />
+                            Download
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -328,7 +434,9 @@ export default function ExperiencesPage() {
               Interested in collaborating or learning more about my experiences?
               Feel free to reach out!
             </p>
-            <Button size="lg">Get in Touch</Button>
+            <Button size="lg" asChild>
+              <a href="mailto:3504vivyan@dpsi.ac.in.">Get in Touch</a>
+            </Button>
           </Card>
         </div>
       </div>

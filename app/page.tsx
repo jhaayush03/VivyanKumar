@@ -91,7 +91,7 @@ export default function HomePage() {
                   size="lg"
                   className="hover-lift bg-transparent"
                 >
-                  <Link href="/resume">Download Resume</Link>
+                  <Link href="/resume">View Resume</Link>
                 </Button>
               </div>
             </div>
@@ -118,14 +118,34 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
               <b>Vivyan Kumar</b>
-              <br></br>An A-Level student at DPS International, Saket, with top
-              scores in Maths, Sciences, and Psychology. I’ve earned
-              distinctions in global math competitions, excelled in standardized
-              exams like SAT, AP, and TOEFL, and led tech and science clubs
-              through hackathons and scientific debates. I play the Indian
-              classical flute, teach STEM concepts on YouTube, and work with
-              Python and machine learning tools. My journey blends academic
-              achievement, research, leadership, and creativity.
+              <br></br>As an A-Level student at Delhi Public School
+              International, Saket, I've cultivated a passion for bridging the
+              gap between theoretical knowledge and real-world applications.
+              With exceptional performance across standardized tests (SAT: 1570,
+              TOEFL: 115) and multiple AP Scholar distinctions, my academic
+              foundation spans mathematics, sciences, and psychology. My
+              achievements in global mathematics competitions, including ranking
+              in the top 500 worldwide in the Avogadro contest and earning
+              International Honour Roll recognition in multiple Waterloo
+              competitions, reflect my analytical mindset and problem-solving
+              abilities. Beyond academics, I've emerged as a leader in
+              technology and innovation through my roles as Head of Hackathon at
+              SYNTAX Tech Club, where I pioneered our school's first
+              inter-school Game Jam, and as a core member of Domus Scientia
+              Science Club. My published research on "Imitation Learning in
+              Games: Teaching AI Through Mimicking Expert Human Players"
+              demonstrates my commitment to exploring cutting-edge applications
+              of artificial intelligence. This research journey, combined with
+              my data science internship at Pickl.AI, showcases my dedication to
+              understanding how technology can enhance human experiences. My
+              diverse interests extend from Indian classical flute, where I've
+              earned distinction certificates, to competitive speedcubing with
+              sub-5-second 2x2 solves, reflecting my ability to excel across
+              varied domains. Through volunteer work at COVID vaccination camps
+              and my YouTube channel teaching mathematics through gaming
+              examples, I strive to make learning accessible and engaging for
+              others. My journey is a blend of academic excellence, research
+              curiosity, leadership experience, and creative problem-solving.
             </p>
           </div>
 
@@ -134,28 +154,28 @@ export default function HomePage() {
               {
                 icon: GraduationCap,
                 title: "Academics",
-                desc: "Strong academic foundation with focus on Mathematics and Science.",
+                desc: "",
                 color: "primary",
                 delay: "0.1s",
               },
               {
                 icon: FileText,
                 title: "Research",
-                desc: "Published research papers and case studies in various domains.",
+                desc: "",
                 color: "chart-2",
                 delay: "0.3s",
               },
               {
                 icon: Briefcase,
                 title: "Experience",
-                desc: "Professional experience through internships and Participation in Top-level Competitions..",
+                desc: "",
                 color: "chart-3",
                 delay: "0.4s",
               },
               {
                 icon: Code,
                 title: "SpeedCubing",
-                desc: "Solved 2x2 through 7x7, pyraminx, skewb, and megaminx, showcasing spatial visualization abilities and knowledge of cubing algorithms.",
+                desc: "",
                 color: "chart-1",
                 delay: "0.2s",
               },

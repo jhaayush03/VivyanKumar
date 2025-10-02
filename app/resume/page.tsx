@@ -26,9 +26,15 @@ export default function ResumePage() {
             <Button
               size="lg"
               className="group animate-slide-up animation-delay-400 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+              asChild
             >
-              <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-              Download PDF
+              <a
+                href="/vivyan_kumar_resume.pdf"
+                download="vivyan_kumar_resume.pdf"
+              >
+                <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                Download PDF
+              </a>
             </Button>
           </div>
 
@@ -319,7 +325,7 @@ export default function ResumePage() {
             <div className="space-y-4">
               <div className="border-l-2 border-chart-3 pl-4 hover:border-l-4 transition-all duration-300 hover:pl-3 hover:bg-chart-3/5 hover:rounded-r-lg hover:py-2">
                 <h3 className="text-lg font-semibold mb-2 hover:text-chart-3 transition-colors duration-300">
-                  SYNTAX - DPSI Tech Club
+                  SYNTAX - DPS Tech Club
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
                   • <b>Vice Head, Hackathon (2024-2025):</b>
@@ -337,7 +343,7 @@ export default function ResumePage() {
 
               <div className="border-l-2 border-chart-4 pl-4 hover:border-l-4 transition-all duration-300 hover:pl-3 hover:bg-chart-4/5 hover:rounded-r-lg hover:py-2">
                 <h3 className="text-lg font-semibold mb-2 hover:text-chart-4 transition-colors duration-300">
-                  Domus Scientia - DPSI Science Club
+                  Domus Scientia - DPS Science Club
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
                   • <b>Core Team Member(2025-Present):</b>
@@ -383,7 +389,7 @@ export default function ResumePage() {
                 </p>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
                   • <b>1st Place:</b>
-                  <br></br> Real Estate Warriors Competition, DPSI Commerce
+                  <br></br> Real Estate Warriors Competition, DPS Commerce
                   Collective 2023
                 </p>
               </div>

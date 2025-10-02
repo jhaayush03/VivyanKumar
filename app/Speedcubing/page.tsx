@@ -1,6 +1,8 @@
 "use client";
-
+import { Navigation } from "@/components/navigation";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 
 export default function SpeedcubingPage() {
@@ -9,16 +11,24 @@ export default function SpeedcubingPage() {
 
   const certificates = [
     {
-      image: "/certificate1.jpg",
+      image: "/speedcubing_c1.png",
       title: "World Cube Association Competition Certificate",
     },
     {
-      image: "/certificate2.jpg",
-      title: "Regional Speedcubing Championship - 1st Place",
+      image: "/speedcubing_c2.jpg",
+      title: "Mathsoc Delhi Open 2020",
     },
     {
-      image: "/certificate3.jpg",
-      title: "National Rubik's Cube Competition Achievement",
+      image: "/speedcubing_c3.jpg",
+      title: "PB Samashathon Delhi",
+    },
+    {
+      image: "/speedcubing_c4.jpg",
+      title: "PB Samashathon Delhi",
+    },
+    {
+      image: "/speedcubing_c5.jpg",
+      title: "Indian Nationals 2019",
     },
   ];
 
@@ -58,14 +68,83 @@ export default function SpeedcubingPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Speedcubing</h1>
-            <p className="text-lg text-muted-foreground">
-              My journey through competitions, achievements, and solving moments
+            <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+              Solved 2x2 through 7x7, pyraminx, skewb, and megaminx, showcasing
+              spatial visualization abilities and knowledge of cubing
+              algorithms.
             </p>
+
+            {/* Key Achievements/Skills */}
+            <div className="max-w-2xl mx-auto text-left">
+              <ul className="space-y-4">
+                {/* First Main Pointer */}
+                <li className="flex items-start text-sm text-muted-foreground">
+                  <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
+                  <div>
+                    <span className="font-semibold text-foreground">
+                      Average solve times (in competition) can be found here
+                    </span>
+                    <ul className="space-y-1.5 mt-2 ml-4">
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>2x2: 4.11 seconds</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>3x3: 15.07 seconds, 38.48 (one handed)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>4x4: 1 minute 22.14 seconds</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Pyraminx: 8.77 seconds</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Skewb: 9.24 seconds</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                {/* Second Main Pointer */}
+                <li className="flex items-start text-sm text-muted-foreground">
+                  <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
+                  <div>
+                    <span className="font-semibold text-foreground">
+                      Unofficial solve times:
+                    </span>
+                    <ul className="space-y-1.5 mt-2 ml-4">
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>5x5: ~4 minutes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>6x6: ~10 minutes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>7x7: ~20 minutes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="inline-block w-1.5 h-1.5 bg-primary/60 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                        <span>Megaminx: ~7 minutes</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Certificates Section - 3 boxes with headlines */}

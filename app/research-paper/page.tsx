@@ -19,7 +19,7 @@ export default function ResearchPaperPage() {
       authors: ["Vivyan Kumar"],
       journal: "Lex Localis ISSN:1581-5374E-ISSN:1855-363X",
       //year: "2024",
-      status: "Published",
+      status: "",
       abstract:
         "Under the guidance of Mr. Vishal Gupta, I’ve written a research paper (accepted for publication in Lex Localis ISSN:1581-5374E-ISSN:1855-363X) on the topic Imitation Learning In Games: Teaching AI Through Mimicking Expert Human Players. In this paper, I researched methods of teaching AI human-like behaviours, with methods such as Behavioural Cloning, Inverse Reinforcement Learning and Generative Adversarial Imitation Learning. I looked at these methods under the lens of video games, writing about how these methods can be used to create more challenging AI bots for the player to play against, as well as improving NPC behaviour to increase immersion in the game’s fictional world.",
       //keywords: [
