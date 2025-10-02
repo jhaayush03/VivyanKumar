@@ -4,9 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
+import { X } from "lucide-react";
 
 export default function SpeedcubingPage() {
   const [hoveredVideo, setHoveredVideo] = useState<number | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<number | null>(
+    null
+  );
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const certificates = [
@@ -64,6 +68,14 @@ export default function SpeedcubingPage() {
         video.currentTime = 0;
       }
     }
+  };
+
+  const openCertificate = (index: number) => {
+    setSelectedCertificate(index);
+  };
+
+  const closeCertificate = () => {
+    setSelectedCertificate(null);
   };
 
   return (
@@ -153,7 +165,7 @@ export default function SpeedcubingPage() {
               {certificates.map((cert, index) => (
                 <Card
                   key={index}
-                  className="overflow-hidden group cursor-pointer hover:shadow-xl transition-all duration-300"
+                  className="overflow-hidden group hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[4/3] bg-muted relative overflow-hidden">
                     <img
@@ -169,9 +181,17 @@ export default function SpeedcubingPage() {
                     />
                   </div>
                   <div className="p-4 bg-background">
-                    <h3 className="font-semibold text-center text-sm">
+                    <h3 className="font-semibold text-center text-sm mb-3">
                       {cert.title}
                     </h3>
+                    <Button
+                      onClick={() => openCertificate(index)}
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      View Certificate
+                    </Button>
                   </div>
                 </Card>
               ))}
@@ -255,6 +275,45 @@ export default function SpeedcubingPage() {
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      {selectedCertificate !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={closeCertificate}
+        >
+          <div
+            className="relative bg-background rounded-lg max-w-6xl max-h-[90vh] w-full overflow-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeCertificate}
+              className="sticky top-4 left-full ml-4 z-10 p-2 bg-background rounded-full shadow-lg hover:bg-muted transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Certificate Image */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-center">
+                {certificates[selectedCertificate].title}
+              </h3>
+              <div className="flex justify-center">
+                <img
+                  src={certificates[selectedCertificate].image}
+                  alt={certificates[selectedCertificate].title}
+                  className="max-w-full h-auto rounded-lg"
+                  onError={(e) => {
+                    e.currentTarget.src;
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function ExperiencesPage() {
         "Completed training in data science, AI, and machine learning",
         "Analyzed GPA predictors using ML models",
       ],
-      certificateUrl: "/internship_c.jpg",
+      certificateUrl: "/internship_c1.jpg",
     },
   ];
 

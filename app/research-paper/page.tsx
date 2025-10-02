@@ -96,8 +96,12 @@ export default function ResearchPaperPage() {
 
                   <div className="flex flex-wrap gap-2">
                     <Button variant="outline" size="sm">
-                      <Download className="h-4 w-4 mr-2" />
-                      Download PDF
+                      <a
+                        href="/Research Paper Vivyan Paper.pdf"
+                        download="vivyan_kumar_resume.pdf"
+                      >
+                        Download PDF
+                      </a>
                     </Button>
                   </div>
                 </Card>

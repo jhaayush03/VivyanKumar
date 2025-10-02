@@ -70,7 +70,7 @@ export default function HomePage() {
                   style={{ animationDelay: "0.2s" }}
                 >
                   An A-Level student at DPS International, Saket, with top
-                  scores in Maths, Sciences, and Psychology. I’ve earned
+                  scores in Maths, Sciences, and Psychology. I've earned
                   distinctions in global math competitions, excelled in
                   standardized exams like SAT, AP, and TOEFL, and led tech and
                   science clubs through hackathons and scientific debates. I
@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-9xl mx-auto">
           <div className="text-center mb-12 animate-slide-up">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -128,24 +128,27 @@ export default function HomePage() {
               in the top 500 worldwide in the Avogadro contest and earning
               International Honour Roll recognition in multiple Waterloo
               competitions, reflect my analytical mindset and problem-solving
-              abilities. Beyond academics, I've emerged as a leader in
-              technology and innovation through my roles as Head of Hackathon at
-              SYNTAX Tech Club, where I pioneered our school's first
-              inter-school Game Jam, and as a core member of Domus Scientia
-              Science Club. My published research on "Imitation Learning in
-              Games: Teaching AI Through Mimicking Expert Human Players"
-              demonstrates my commitment to exploring cutting-edge applications
-              of artificial intelligence. This research journey, combined with
-              my data science internship at Pickl.AI, showcases my dedication to
-              understanding how technology can enhance human experiences. My
-              diverse interests extend from Indian classical flute, where I've
-              earned distinction certificates, to competitive speedcubing with
-              sub-5-second 2x2 solves, reflecting my ability to excel across
-              varied domains. Through volunteer work at COVID vaccination camps
-              and my YouTube channel teaching mathematics through gaming
-              examples, I strive to make learning accessible and engaging for
-              others. My journey is a blend of academic excellence, research
-              curiosity, leadership experience, and creative problem-solving.
+              abilities.<br></br>
+              <br></br> Beyond academics, I've emerged as a leader in technology
+              and innovation through my roles as Head of Hackathon at SYNTAX
+              Tech Club, where I pioneered our school's first inter-school Game
+              Jam, and as a core member of Domus Scientia Science Club. My
+              published research on "Imitation Learning in Games: Teaching AI
+              Through Mimicking Expert Human Players" demonstrates my commitment
+              to exploring cutting-edge applications of artificial intelligence.
+              This research journey, combined with my data science internship at
+              Pickl.AI, showcases my dedication to understanding how technology
+              can enhance human experiences.
+              <br></br>
+              <br></br> My diverse interests extend from Indian classical flute,
+              where I've earned distinction certificates, to competitive
+              speedcubing with sub-5-second 2x2 solves, reflecting my ability to
+              excel across varied domains. Through volunteer work at COVID
+              vaccination camps and my YouTube channel teaching mathematics
+              through gaming examples, I strive to make learning accessible and
+              engaging for others. My journey is a blend of academic excellence,
+              research curiosity, leadership experience, and creative
+              problem-solving.
             </p>
           </div>
 
@@ -153,10 +156,11 @@ export default function HomePage() {
             {[
               {
                 icon: GraduationCap,
-                title: "Academics",
+                title: "Certificates",
                 desc: "",
                 color: "primary",
                 delay: "0.1s",
+                link: "/certificate",
               },
               {
                 icon: FileText,
@@ -164,6 +168,7 @@ export default function HomePage() {
                 desc: "",
                 color: "chart-2",
                 delay: "0.3s",
+                link: "/research-paper",
               },
               {
                 icon: Briefcase,
@@ -171,6 +176,7 @@ export default function HomePage() {
                 desc: "",
                 color: "chart-3",
                 delay: "0.4s",
+                link: "/Experiences",
               },
               {
                 icon: Code,
@@ -178,29 +184,33 @@ export default function HomePage() {
                 desc: "",
                 color: "chart-1",
                 delay: "0.2s",
+                link: "/speedcubing",
               },
             ].map((item, index) => (
-              <Card
-                key={index}
-                className="p-6 hover-lift group animate-scale-in gradient-border"
-                style={{ animationDelay: item.delay }}
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div
-                    className={`p-2 bg-${item.color}/10 rounded-lg group-hover:bg-${item.color}/20 transition-all duration-300 group-hover:scale-110`}
-                  >
-                    <item.icon
-                      className={`h-6 w-6 text-${item.color} group-hover:rotate-12 transition-transform duration-300`}
-                    />
+              <Link key={index} href={item.link} className="block">
+                <Card
+                  className="p-6 hover-lift group animate-scale-in gradient-border h-full hover:shadow-lg transition-all duration-300"
+                  style={{ animationDelay: item.delay }}
+                >
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div
+                      className={`p-3 bg-${item.color}/10 rounded-lg group-hover:bg-${item.color}/20 transition-all duration-300 group-hover:scale-110`}
+                    >
+                      <item.icon
+                        className={`h-8 w-8 text-${item.color} group-hover:rotate-12 transition-transform duration-300`}
+                      />
+                    </div>
+                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    {item.desc && (
+                      <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                        {item.desc}
+                      </p>
+                    )}
                   </div>
-                  <h3 className="font-semibold group-hover:text-primary transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  {item.desc}
-                </p>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
