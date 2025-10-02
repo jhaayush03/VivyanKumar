@@ -430,16 +430,6 @@ export default function CertificatePage() {
                   <p className="text-sm text-muted-foreground mb-4">
                     {cert.issuer}
                   </p>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <Download className="h-4 w-4 mr-2" />
-                      Download
-                    </Button>
-                  </div>
                 </div>
               </Card>
             ))}

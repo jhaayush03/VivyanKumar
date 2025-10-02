@@ -46,10 +46,6 @@ export default function ResumePage() {
                 <Mail className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
                 <span className="text-sm">3504vivyan@dpsi.ac.in.</span>
               </div>
-              <div className="flex items-center space-x-2 hover:text-primary transition-colors duration-300 cursor-pointer">
-                <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-                <span className="text-sm">yourportfolio.com</span>
-              </div>
             </div>
           </Card>
 
@@ -58,12 +54,14 @@ export default function ResumePage() {
               Professional Summary
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              A high-achieving A-Level student at DPS International, Saket, with
-              top scores in Maths, Sciences, and Psychology. He has strong
-              credentials in standardized tests (SAT, AP, TOEFL), many awards in
-              math competitions, and leadership roles in tech and science clubs.
-              Beyond academics, he plays the flute, speaks publicly, teaches via
-              his YouTube channel, and works with Python and ML tools.
+              An A-Level student at DPS International, Saket, with top scores in
+              Maths, Sciences, and Psychology. I’ve earned distinctions in
+              global math competitions, excelled in standardized exams like SAT,
+              AP, and TOEFL, and led tech and science clubs through hackathons
+              and scientific debates. I play the Indian classical flute, teach
+              STEM concepts on YouTube, and work with Python and machine
+              learning tools. My journey blends academic achievement, research,
+              leadership, and creativity.
             </p>
           </Card>
 
@@ -86,7 +84,11 @@ export default function ResumePage() {
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li className="hover:text-foreground transition-colors duration-300">
-                    • SAT: 1530 - 800 Mathematics, 730 Reading and Writing.
+                    • SAT: 1570 - superscore, 730 English, 800 math
+                  </li>
+                  <li className="hover:text-foreground transition-colors duration-300">
+                    • IELTS: 8 - 9 Listening, 8.5 Reading, 7.5 Speaking, 7
+                    Writing
                   </li>
                   <li className="hover:text-foreground transition-colors duration-300">
                     • TOEFL: 115 - 29 Reading, 29 Listening, 29 Speaking, 28

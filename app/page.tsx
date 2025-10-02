@@ -69,13 +69,15 @@ export default function HomePage() {
                   className="text-xl text-muted-foreground text-pretty max-w-2xl animate-slide-up"
                   style={{ animationDelay: "0.2s" }}
                 >
-                  A high-achieving A-Level student at DPS International, Saket,
-                  with top scores in Maths, Sciences, and Psychology. He has
-                  strong credentials in standardized tests (SAT, AP, TOEFL),
-                  many awards in math competitions, and leadership roles in tech
-                  and science clubs. Beyond academics, he plays the flute,
-                  speaks publicly, teaches via his YouTube channel, and works
-                  with Python and ML tools.
+                  An A-Level student at DPS International, Saket, with top
+                  scores in Maths, Sciences, and Psychology. I’ve earned
+                  distinctions in global math competitions, excelled in
+                  standardized exams like SAT, AP, and TOEFL, and led tech and
+                  science clubs through hackathons and scientific debates. I
+                  play the Indian classical flute, teach STEM concepts on
+                  YouTube, and work with Python and machine learning tools. My
+                  journey blends academic achievement, research, leadership, and
+                  creativity.
                 </p>
               </div>
 
@@ -91,48 +93,6 @@ export default function HomePage() {
                 >
                   <Link href="/resume">Download Resume</Link>
                 </Button>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8">
-                {[
-                  {
-                    value: "10+",
-                    label: "Projects",
-                    color: "text-primary",
-                    delay: "0.6s",
-                  },
-                  {
-                    value: "5+",
-                    label: "Research Papers",
-                    color: "text-chart-1",
-                    delay: "0.7s",
-                  },
-                  {
-                    value: "3+",
-                    label: "Internships",
-                    color: "text-chart-2",
-                    delay: "0.8s",
-                  },
-                  {
-                    value: "15+",
-                    label: "Certificates",
-                    color: "text-chart-3",
-                    delay: "0.9s",
-                  },
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className="text-center animate-scale-in hover:scale-110 transition-transform duration-300 cursor-pointer"
-                    style={{ animationDelay: stat.delay }}
-                  >
-                    <div className={`text-2xl font-bold ${stat.color}`}>
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -158,12 +118,14 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
               <b>Vivyan Kumar</b>
-              <br></br>A driven STEM scholar excelling in Mathematics, Sciences
-              & Psychology, with a 1530 SAT & 115 TOEFL. Top-tier IGCSE,
-              AS/A-Level & AP results, plus wins in international math contests.
-              Active leader in school tech & science clubs, skilled in Python &
-              ML. Outside academics: flute player, public speaker & educational
-              content creator.
+              <br></br>An A-Level student at DPS International, Saket, with top
+              scores in Maths, Sciences, and Psychology. I’ve earned
+              distinctions in global math competitions, excelled in standardized
+              exams like SAT, AP, and TOEFL, and led tech and science clubs
+              through hackathons and scientific debates. I play the Indian
+              classical flute, teach STEM concepts on YouTube, and work with
+              Python and machine learning tools. My journey blends academic
+              achievement, research, leadership, and creativity.
             </p>
           </div>
 
@@ -171,17 +133,10 @@ export default function HomePage() {
             {[
               {
                 icon: GraduationCap,
-                title: "Education",
+                title: "Academics",
                 desc: "Strong academic foundation with focus on Mathematics and Science.",
                 color: "primary",
                 delay: "0.1s",
-              },
-              {
-                icon: Code,
-                title: "Leadership",
-                desc: "increasing participation and innovation while mentoring peers to collaborate effectively.",
-                color: "chart-1",
-                delay: "0.2s",
               },
               {
                 icon: FileText,
@@ -196,6 +151,13 @@ export default function HomePage() {
                 desc: "Professional experience through internships and Participation in Top-level Competitions..",
                 color: "chart-3",
                 delay: "0.4s",
+              },
+              {
+                icon: Code,
+                title: "SpeedCubing",
+                desc: "Solved 2x2 through 7x7, pyraminx, skewb, and megaminx, showcasing spatial visualization abilities and knowledge of cubing algorithms.",
+                color: "chart-1",
+                delay: "0.2s",
               },
             ].map((item, index) => (
               <Card

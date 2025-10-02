@@ -96,16 +96,8 @@ export default function ResearchPaperPage() {
 
                   <div className="flex flex-wrap gap-2">
                     <Button variant="outline" size="sm">
-                      <Eye className="h-4 w-4 mr-2" />
-                      View Abstract
-                    </Button>
-                    <Button variant="outline" size="sm">
                       <Download className="h-4 w-4 mr-2" />
                       Download PDF
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Publisher Link
                     </Button>
                   </div>
                 </Card>

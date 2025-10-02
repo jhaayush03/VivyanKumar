@@ -12,7 +12,8 @@ export function Navigation() {
     { label: "Resume", href: "/resume" },
     { label: "Certificates", href: "/certificate" },
     { label: "Research Paper", href: "/research-paper" },
-    { label: "SpeedCubing", href: "/speedcubing" },
+    { label: "Experience", href: "/Experiences" },
+    { label: "SpeedCubing", href: "/Speedcubing" },
   ];
 
   const socialLinks = [
