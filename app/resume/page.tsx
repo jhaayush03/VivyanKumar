@@ -39,7 +39,7 @@ export default function ResumePage() {
           </div>
 
           <Card className="p-6 mb-8 animate-slide-up animation-delay-600 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               <div className="flex items-center space-x-2 hover:text-primary transition-colors duration-300 cursor-pointer">
                 <MapPin className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
                 <span className="text-sm">India</span>

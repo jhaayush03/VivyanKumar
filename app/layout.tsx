@@ -1,28 +1,31 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
-  description: "Portfolio website showcasing projects, research, and professional experience",
-  generator: "v0.app",
-}
+  title: "Vivyan Kumar - Portfolio",
+  description:
+    "Portfolio website showcasing Certificates, research, and professional experience",
+  generator: "https://www.digitrixsolutions.in",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}
+      >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

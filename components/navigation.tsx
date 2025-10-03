@@ -19,11 +19,10 @@ export function Navigation() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://www.linkedin.com/in/vivyan-kumar-a869a2381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       label: "LinkedIn",
     },
-    { icon: Github, href: "https://github.com/yourprofile", label: "GitHub" },
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
+    { icon: Mail, href: "mailto:3504vivyan@dpsi.ac.in.", label: "Email" },
   ];
 
   return (

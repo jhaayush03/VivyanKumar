@@ -184,7 +184,7 @@ export default function HomePage() {
                 desc: "",
                 color: "chart-1",
                 delay: "0.2s",
-                link: "/speedcubing",
+                link: "/Speedcubing",
               },
             ].map((item, index) => (
               <Link key={index} href={item.link} className="block">
