@@ -13,7 +13,7 @@ export function Navigation() {
     { label: "Certificates", href: "/certificate" },
     { label: "Research Paper", href: "/research-paper" },
     { label: "Experience", href: "/Experiences" },
-    { label: "SpeedCubing", href: "/Speedcubing" },
+    { label: "Speed Cubing", href: "/Speedcubing" },
   ];
 
   const socialLinks = [

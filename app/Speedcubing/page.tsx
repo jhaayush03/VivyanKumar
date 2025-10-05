@@ -86,7 +86,7 @@ export default function SpeedcubingPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Speedcubing</h1>
+            <h1 className="text-4xl font-bold mb-4">Speed Cubing</h1>
             <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
               Solved 2x2 through 7x7, pyraminx, skewb, and megaminx, showcasing
               spatial visualization abilities and knowledge of cubing

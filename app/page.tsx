@@ -122,13 +122,12 @@ export default function HomePage() {
               International, Saket, I've cultivated a passion for bridging the
               gap between theoretical knowledge and real-world applications.
               With exceptional performance across standardized tests (SAT: 1570,
-              TOEFL: 115) and multiple AP Scholar distinctions, my academic
-              foundation spans mathematics, sciences, and psychology. My
-              achievements in global mathematics competitions, including ranking
-              in the top 500 worldwide in the Avogadro contest and earning
-              International Honour Roll recognition in multiple Waterloo
-              competitions, reflect my analytical mindset and problem-solving
-              abilities.<br></br>
+              TOEFL: 115) and an AP Scholar distinctions, my academic foundation
+              spans mathematics, sciences, and psychology. My achievements in
+              global mathematics competitions, including ranking in the top 500
+              worldwide in the Avogadro contest and earning International Honour
+              Roll recognition in multiple Waterloo competitions, reflect my
+              analytical mindset and problem-solving abilities.<br></br>
               <br></br> Beyond academics, I've emerged as a leader in technology
               and innovation through my roles as Head of Hackathon at SYNTAX
               Tech Club, where I pioneered our school's first inter-school Game

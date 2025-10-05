@@ -90,7 +90,7 @@ export default function ResumePage() {
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li className="hover:text-foreground transition-colors duration-300">
-                    • SAT: 1570 - superscore, 730 English, 800 math
+                    • SAT: 1570 - superscore, 770 English, 800 math
                   </li>
                   <li className="hover:text-foreground transition-colors duration-300">
                     • IELTS: 8 - 9 Listening, 8.5 Reading, 7.5 Speaking, 7
@@ -135,6 +135,9 @@ export default function ResumePage() {
                     • International Honour Roll for Waterloo Mathematics Exams:
                     CIMC 2023, CSMC 2024, Galois 2024, Fermat 2025
                   </li>
+                  <li className="hover:text-foreground transition-colors duration-300">
+                    • Further Mathematics AS level
+                  </li>
                 </ul>
               </div>
 
@@ -154,7 +157,7 @@ export default function ResumePage() {
                     Certificates
                   </li>
                   <li className="hover:text-foreground transition-colors duration-300">
-                    • NCO: Zonal Excellence - Zonal Rank 12 & Destinction
+                    • NCO: Zonal Excellence - Zonal Rank 12 & Distinction
                     Certificates
                   </li>
                   <li className="hover:text-foreground transition-colors duration-300">
@@ -178,7 +181,7 @@ export default function ResumePage() {
                     • Multiple Scholar Badges: 2022, 2023, 2024
                   </li>
                   <li className="hover:text-foreground transition-colors duration-300">
-                    • Academics Proficiency Awards: Aditional Mathematics 2022,
+                    • Academics Proficiency Awards: Additional Mathematics 2022,
                     Physics 2022-2023, Chemistry 2022-2023, French 2023
                   </li>
                 </ul>
@@ -347,7 +350,7 @@ export default function ResumePage() {
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
                   • <b>Core Team Member(2025-Present):</b>
-                  <br></br> One od the leading members of Domus Scientia, I
+                  <br></br> One of the leading members of Domus Scientia, I
                   collaborated with the rest of the team to organize an
                   intra-school scientific quiz, as well as an intra-school
                   scientific debate competition.
@@ -417,7 +420,7 @@ export default function ResumePage() {
                   www.pickl.ai
                 </h3>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
-                  • Completed training in data science, AI, and macjine learning
+                  • Completed training in data science, AI, and machine learning
                 </p>
                 <p className="text-sm text-muted-foreground mb-2 hover:text-foreground transition-colors duration-300">
                   • Analyzed GPA predictors using ML models
