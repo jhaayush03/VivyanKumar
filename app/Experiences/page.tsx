@@ -24,7 +24,7 @@ export default function ExperiencesPage() {
       duration: "Summer 2025",
       type: "Full-time Internship",
       description:
-        "Worked on developing scalable web applications and contributed to multiple high-impact projects.",
+        "Mastered the principles of data science and machine learning, culminating in a project analyzing GPA predictors.",
       responsibilities: [
         "Completed training in data science, AI, and machine learning",
         "Analyzed GPA predictors using ML models",
