@@ -22,7 +22,7 @@ export function Navigation() {
       href: "https://www.linkedin.com/in/vivyan-kumar-a869a2381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       label: "LinkedIn",
     },
-    { icon: Mail, href: "mailto:3504vivyan@dpsi.ac.in.", label: "Email" },
+    { icon: Mail, href: "mailto:vivyankumar2008@gmail.com", label: "Email" },
   ];
 
   return (

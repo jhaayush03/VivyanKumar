@@ -50,7 +50,7 @@ export default function ResumePage() {
               </div>
               <div className="flex items-center space-x-2 hover:text-primary transition-colors duration-300 cursor-pointer">
                 <Mail className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-                <span className="text-sm">3504vivyan@dpsi.ac.in.</span>
+                <span className="text-sm">vivyankumar2008@gmail.com</span>
               </div>
             </div>
           </Card>
@@ -134,9 +134,6 @@ export default function ResumePage() {
                   <li className="hover:text-foreground transition-colors duration-300">
                     • International Honour Roll for Waterloo Mathematics Exams:
                     CIMC 2023, CSMC 2024, Galois 2024, Fermat 2025
-                  </li>
-                  <li className="hover:text-foreground transition-colors duration-300">
-                    • Further Mathematics AS level
                   </li>
                 </ul>
               </div>
@@ -237,7 +234,7 @@ export default function ResumePage() {
                 <p className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                   • <b>AS Levels (2024-2025): 5A, 1B </b>
                   <br></br> Mathematics (84), Physics (86), Chemistry (83),
-                  Economics (73), Psychology (87)
+                  Economics (73), Psychology (87), Further Mathematics (80)
                 </p>
                 <p className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                   • <b>IGSE (2022-2024): 6A*, 1A</b>

@@ -78,8 +78,7 @@ export default function ExperiencesPage() {
       responsibilities: [
         "Third Year Diploma with First Division Distinction across all years, Prayag Sangeet Samiti (2018–2023) ",
       ],
-      certificateUrl:
-        "/Prayag_Sangeet_Samiti_Flute_Junior_Diploma_Examination_Marksheet.jpg",
+      certificateUrl: "/Flute_Certificates.pdf",
     },
     {
       organization: "Think Summit- Confabulation",
@@ -141,7 +140,7 @@ export default function ExperiencesPage() {
         "I started a YouTube channel about teaching mathematics (and later other subjects) in a fun and interesting way, using examples from video games that many children will find relatable.",
         "Currently, 34 subscribers, 1 video and 596 views.",
       ],
-      certificateUrl: null,
+      certificateUrl: "https://www.youtube.com/@FunwithMathsAndStudying",
     },
   ];
 
@@ -398,26 +397,41 @@ export default function ExperiencesPage() {
 
                       {exp.certificateUrl && (
                         <div className="flex gap-2 mt-4">
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            onClick={() =>
-                              handleViewCertificate(exp.certificateUrl)
-                            }
-                          >
-                            <Eye className="h-4 w-4 mr-2" />
-                            View Certificate
-                          </Button>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            onClick={() =>
-                              handleDownloadCertificate(exp.certificateUrl)
-                            }
-                          >
-                            <Download className="h-4 w-4 mr-2" />
-                            Download
-                          </Button>
+                          {exp.organization === "Social Venture" ? (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() =>
+                                handleViewCertificate(exp.certificateUrl)
+                              }
+                            >
+                              <Eye className="h-4 w-4 mr-2" />
+                              View YouTube Channel
+                            </Button>
+                          ) : (
+                            <>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() =>
+                                  handleViewCertificate(exp.certificateUrl)
+                                }
+                              >
+                                <Eye className="h-4 w-4 mr-2" />
+                                View Certificate
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() =>
+                                  handleDownloadCertificate(exp.certificateUrl)
+                                }
+                              >
+                                <Download className="h-4 w-4 mr-2" />
+                                Download
+                              </Button>
+                            </>
+                          )}
                         </div>
                       )}
                     </div>
@@ -435,7 +449,7 @@ export default function ExperiencesPage() {
               Feel free to reach out!
             </p>
             <Button size="lg" asChild>
-              <a href="mailto:3504vivyan@dpsi.ac.in.">Get in Touch</a>
+              <a href="mailto:vivyankumar2008@gmail.com">Get in Touch</a>
             </Button>
           </Card>
         </div>
