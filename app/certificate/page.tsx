@@ -104,7 +104,7 @@ export default function CertificatePage() {
     {
       title:
         "SOF International Mathematics Olympiad Certificate of Participation 2022 ",
-      image: "./c_13.png",
+      image: "./c13_.png",
       issuer: "",
       date: "",
       category: "",
