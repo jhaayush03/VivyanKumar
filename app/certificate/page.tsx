@@ -226,7 +226,7 @@ export default function CertificatePage() {
               onClick={() => window.open("./all-certificates.pdf", "_blank")}
             >
               <Eye className="h-5 w-5 mr-2" />
-              View All Certificates
+              PFA a document containing all the certificates
             </Button>
           </div>
         </div>
