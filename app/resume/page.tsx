@@ -28,10 +28,7 @@ export default function ResumePage() {
               className="group animate-slide-up animation-delay-400 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
               asChild
             >
-              <a
-                href="/vivyan_kumar_resume.pdf"
-                download="vivyan_kumar_resume.pdf"
-              >
+              <a href="/vivyan_cv.pdf" download="vivyan_kumar_resume.pdf">
                 <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 Download PDF
               </a>
