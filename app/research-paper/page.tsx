@@ -98,7 +98,7 @@ export default function ResearchPaperPage() {
                     <Button variant="outline" size="sm">
                       <a
                         href="./research_paper_vivyan_kumar.pdf"
-                        download="Research_Paper_Vivayn_Kumar.pdf"
+                        download="research_paper_vivyan_kumar.pdf"
                       >
                         Download PDF
                       </a>
